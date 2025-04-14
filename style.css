@@ -13,7 +13,6 @@
 
 
 body{
-    /* background-color: #1f242d; */
     overflow-x: hidden;
     color: var(--color4);
     background-color: #061525;
@@ -36,192 +35,95 @@ body{
     --color11:#fed2d1;
     --colo12:#195391;
 }
-/* 
 
-header{
-    padding: 20px;
-    background-color: #1f242d;
-    border-bottom: 1px solid var(--color11);
+
+
+
+.head{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
     display: flex;
+    padding: 20px;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+    background-color: var(--color11);
 }
 
-
-header .logo{
-    color: var(--color4);    
-    font-size: 1.5rem;
+.head .logo{
+    color: var(--color2);
+    font-size: 1.4rem;
     font-weight: 600;
     text-decoration: none;
-    margin-left: 30px;
-    font-size: 2rem;
 }
-
-nav input{
-    margin-left: -50%;
-    padding: 0.32rem 20px;
-    border-top-left-radius: 13px;
-    border-bottom-left-radius: 13px;
-    outline: none;
-    border: none;
-    background-color: var(--color4);
-    font-weight: 500;
-}
-
-nav .icon{
-   background-color: var(--color4);
-   padding: 0.28rem 10px;
-   position: relative;
-   color: var(--color6);
-   left: -5px;
-   top: 1px;
-   border-top-right-radius: 13px;
-   border-bottom-right-radius: 13px;
-}
-
-
-nav h2{
-    display: inline;
-}
-
-nav .card{
-    position: relative;
-    left: 55px;
-    color: var(--color4);
-}
-
-nav .user{
-    position: relative;
-    left: 20px;
-    color: var(--color4);
-} */
-
-
-
-/* Extra small devices (phones, 600px and down) */
-/* @media (width < 750px){ */
-    header{
-        position: relative;
-        display: block;
-        margin-top: 25px;
-        background-color: transparent;
-        border-bottom: none;
-
-    }
-    nav h2{
-        margin-top: 30px;
-        position: relative;
-        top: 90px;
-        font-size:2.4rem;
-    }
-
-    nav input{
-        position: relative;
-        left: 65%;
-        background-color: red;
-    }
-    nav a.icon{
-        position: relative;
-        left: 63%;
-        padding: 0.25rem 10px;
-    }
-/* } */
-
-
 
 nav{
-    box-shadow: 0 0 20px var(--white);
-    background-color:var(--color4);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-nav li{
-    height: 65px;
+    margin-right: 5%;
 }
 
 nav a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+    margin-left: 40px;
     color: var(--color2);
-    font-weight: 500;
-}
-
-nav .icon{
-    font-size: 3rem;
-    color: var(--color3);
-}
-
-nav li:first-child{
-    margin-right: auto;
-}
-
-nav li:first-child:hover{
-    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 3px;
 }
 
 
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: #1b756b94;
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px #0000001a;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+nav a:hover,nav a.home{
+      background-color: var(--colo12);
+      color: var(--color4);
+      border-top-right-radius: 10px;
+     border-bottom-left-radius: 10px;
 
 }
 
-.sidebar li{
-    width: 100%
-}
-
-@media (max-width:800px) {
-      .hiedonmobile{
-        display: none;
-      }
-}
-
-.menu-button{
-    display: none;
-}
-
-@media (max-width:800px) {
-    .sidebar{
-        width: 100%;
-    }
-    .menu-button{
+@media screen and (min-width:300px) and (max-width:767px) {
+    .head{
+        margin-top: 15px;
+        background-color: transparent;
         display: block;
+        text-align: center;
+        position: relative;
     }
-} 
+    .head .logo{
+        color: var(--color4);
+    }
+    nav{
+        margin-top: 10px;
+    }
+    nav a{
+        color: var(--color4);
+        display: block;
+        font-weight: 400;
+    }
+    nav a:hover,
+    nav a.home{
+        background-color: transparent;
+        border-radius: none;
+    }
 
+    
+}
+
+@media screen and (min-width:767px) and (max-width:1025px) {
+    nav{
+        margin-right: 0;
+    }
+}
+
+
+@media screen and (min-width:1300px) and (max-width:1441px) {
+    nav{
+        margin-right: 3%;
+    }
+}
 
 /* SECTION */
 section{
-    padding: 10rem 0 4rem 0;
+    padding: 10rem 0 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -301,6 +203,7 @@ section button:hover{
 @media screen and (min-width:300px) and (max-width:480px){
      section{
           flex-direction: column;
+          padding: 3rem 0 2rem 0;
      }
      section img{
         width: 250px;
@@ -325,6 +228,7 @@ section button:hover{
 @media screen and (min-width:481px) and (max-width:600px){
     section{
         flex-direction: column;
+        padding: 4rem 0 2rem 0;
    }
    section img{
       width: 250px;
@@ -342,6 +246,7 @@ section button:hover{
 @media screen and (min-width:601px) and (max-width:767px){
     section{
         flex-direction: column;
+        padding: 4rem 0 2rem 0;
    }
    section img{
       width: 255px;
@@ -359,7 +264,7 @@ section button:hover{
 
 @media screen and (min-width:767px) and (max-width:1025px){
    section{
-    padding: 12rem 0 3rem 0;
+    padding: 11rem 0 3rem 0;
    }
     section img{
       width: 280px;
@@ -414,7 +319,6 @@ section button:hover{
     grid-template-columns:repeat(auto-fill,minmax(320px,1.5rem));
     gap: 30px;
     justify-content: center; 
-    margin-top: 9%;
 }
 
 .types{
@@ -422,9 +326,8 @@ section button:hover{
     align-items: center;
     justify-content: space-around;
     border: 1px solid var(--color11);
-    padding: 10px;
+    padding: 5px;
     color: var(--color2);
-
 }
 
 .active1{
