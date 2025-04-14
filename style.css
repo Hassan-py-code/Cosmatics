@@ -135,7 +135,7 @@ nav .user{
 
 nav{
     box-shadow: 0 0 20px var(--white);
-    background-color:var(--color2);
+    background-color:var(--color4);
     position: fixed;
     top: 0;
     width: 100%;
@@ -160,7 +160,7 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: var(--white);
+    color: var(--color2);
     font-weight: 500;
 }
 
