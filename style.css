@@ -97,7 +97,7 @@ nav a:hover,nav a.home{
     nav a{
         color: var(--color4);
         display: block;
-        font-weight: 400;
+        font-weight: 500;
     }
     nav a:hover,
     nav a.home{
@@ -308,6 +308,12 @@ section button:hover{
        font-size: 1.3rem;
        inline-size: 600px;
    }
+ }
+
+
+ .media{
+    background-color: #ff9d00;
+    text-align: center;
  }
 
 
